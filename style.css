@@ -1,0 +1,114 @@
+:root {
+  --ff-general: 'Palanquin', sans-serif;
+  --ff-title: 'Staatliches', cursive;
+  --fc-paragraph: #23053A;
+  --header-bg: #8E9AAF;
+  --body-bg: #EFF1FF;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #EFF1FF;
+  font-family: var(--ff-general);
+}
+
+.page {
+  text-align: center;
+
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+header {
+  background: var(--header-bg);
+  padding: 3.2rem 0 3.0rem 0;
+  margin-bottom: 1.4rem;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--ff-title);
+  font-weight: 400;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: #FFFFFF;
+
+  background: #CBC0D3;
+  text-shadow: 0px 3px 3px rgba(0,0,0,0.25);
+}
+
+main {
+  margin-bottom: 6rem;
+  padding: 0 3.2rem;
+}
+
+main p {
+  color: var(--fc-paragraph);
+  margin: 0 5rem 4rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.products-list {
+  display: grid;
+  gap: 32px;
+}
+
+.product {
+  position: relative;
+}
+
+.product h2 {
+  position: absolute;
+  z-index: 1;
+  top: 1.6rem; 
+  right: 1.6rem;
+
+  color: #4A4E69;
+  background: #FEEAFA;
+  padding: 5px 24px;
+  border-radius: 20px;
+
+  font-size: 2rem;
+
+  animation: drop 500ms backwards 400ms;
+}
+
+.product img {
+  border-radius: 25px;
+  animation: rise 500ms backwards 400ms;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
